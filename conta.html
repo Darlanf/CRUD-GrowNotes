@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar conta</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="shortcut icon" href="./assets/img/journal-bookmark-fill.svg" type="image/x-icon">
+</head>
+<body class="bg-animated">
+    <div class="container container-layout d-flex justify-content-center align-items-center">
+        <div class="row d-flex justify-content-center">
+            <div class="col-10 col-lg-6">
+                <div class="col-12 mt-3 d-flex flex-columns justify-content-center">
+                    <h1 class="title-animation">GROWNOTES <i class="bi bi-journals"></i></h1>
+                </div>
+                <div class="col-12 mt-3 text-center">
+                    <p class="tips-animation first">Cadastre seu E-mail.</p>
+                    <p class="tips-animation second">Utilize uma senha fácil, com pelo menos 4 digitos.</p>
+                    <p class="tips-animation third">Confirme sua senha e aproveite!</p>
+                </div>
+                <div class="container">
+                    <form class="row mt-5 d-flex justify-content-center" id="form-account" novalidate>
+                            <div class="col-12">
+                                <h2>Criar nova conta!</h2>
+                            </div>
+                        <div class="col-12">
+                            <div class="form-floating mb-4">
+                            <input type="email" class="form-control" id="input-email" placeholder="name@example.com" name="email" required/>
+                            <div class="valid-feedback">E-mail preenchido.</div>
+                            <div class="invalid-feedback">Preencha o e-mail.</div>
+                            <label for="input-email">Email address</label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-floating">
+                            <input type="password" class="form-control" id="input-password" placeholder="Password" name="password" required/>
+                            <div class="text-end">
+                                <button type="button" onclick="showPassword()" class="btn btn-light eyes">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="16"
+                                    height="16"
+                                    fill="currentColor"
+                                    class="bi bi-eye"
+                                    viewBox="0 0 16 16"
+                                >
+                                    <path
+                                    d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"
+                                    />
+                                    <path
+                                    d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"
+                                    />
+                                </svg>
+                                </button>
+                            </div>
+                            <div class="valid-feedback">Password preenchido.</div>
+                            <div class="invalid-feedback">Preencha o password.</div>
+                            <label for="input-password">Password</label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-floating">
+                            <input type="password" class="form-control" id="input-confirm-password" placeholder="Confirm-Password" name="confirm-password" required/>
+                            <div class="text-end">
+                                <button type="button" onclick="showConfirmPassword()" class="btn btn-light eyes">
+                                <svg
+                                    id="svg-confirm-password"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="16"
+                                    height="16"
+                                    fill="currentColor"
+                                    class="bi bi-eye"
+                                    viewBox="0 0 16 16"
+                                >
+                                    <path
+                                    d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"
+                                    />
+                                    <path
+                                    d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"
+                                    />
+                                </svg>
+                                </button>
+                            </div>
+                            <div class="valid-feedback">Confirmação de password preenchida.</div>
+                            <div class="invalid-feedback">Preencha a confirmação.</div>
+                            <label for="input-confirm-password">Confirm Password</label>
+                            </div>
+                        </div>
+                        <div class="col mt-1">
+                            <button class="btn btns" type="submit">Salvar</button>
+                            <a class="btn btns" href="index.html" role="button">Voltar</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+      </div>
+      <div id="my-alert"></div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./assets/js/conta.js"></script>
+</body>
+</html>

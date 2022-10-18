@@ -1,0 +1,91 @@
+@import url('./variables.css');
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-size: 18px;
+    font-family:'Special Elite', monospace;
+    color: var(--txt-color);
+}
+.bg-animated {
+    background : linear-gradient(90deg, #22b02c, #22b077, #2298b0, #2264b0);
+    animation: moving 8s ease infinite;
+    background-size: 400% 400%;
+}
+
+@keyframes moving {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 50% 100%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+form {
+    border-radius: 5%;
+}
+.container-layout {
+    height: 100vh;
+}
+
+.eyes {
+    margin-top: -85px;
+    margin-right: 10px;  
+}
+.btns {
+    margin-top: -20px;
+    background-color: var(--txt-color);
+}
+
+.btns:hover {
+    background-color: white;
+}
+
+.title-animation {
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing normal 5s steps(30) forwards ;
+}
+
+.tips-animation {
+    opacity: 0;
+    animation: showing 3s forwards;
+}
+.first {
+    animation-delay: 1s;
+}
+.second {
+    animation-delay: 2s;
+}
+.third {
+    animation-delay: 3s;
+}
+
+@keyframes typing {
+    0% {
+        max-width: 0%;
+    }
+    100% {
+        max-width: 80%;
+    }
+}
+@keyframes showing {
+    0% { opacity: 0;}
+    25%{ opacity: 0.1;}
+    50% { opacity: 0.5;}
+    100% { opacity: 1;}
+}
+
+
+#my-alert {
+    position: absolute;
+    top: 0px;
+    right: 50px;
+    z-index: 9999;
+  }

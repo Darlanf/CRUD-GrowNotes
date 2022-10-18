@@ -1,0 +1,79 @@
+@import url('./variables.css');
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#all-notes {
+    font-size: 20px;
+    font-family: 'Special Elite', monospace;
+    /* background-color: var(--bg-color); */
+    color: var(--txt-color);
+}
+.bg-animated {
+    background : linear-gradient(60deg, #22b02c, #22b077, #2298b0, #2264b0);
+    animation: moving 8s ease infinite;
+    background-size: 400% 400%;
+}
+
+@keyframes moving {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 50% 100%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+h1, h2, h3, h4, h5, h6 {
+    color: var(--txt-color);
+}
+
+table, th, td, tr {
+    border: 5px solid white;
+    border-style: double;
+}
+thead, .bg-th {
+    background-color: var(--txt-color) !important;
+}
+
+#btn-logout {
+    background-color: var(--btn-delete-color);
+    color:black;
+    cursor: pointer;
+}
+#btn-submit, #btn-reset {
+    background-color: var(--txt-color);
+    width: 60px;
+}
+#btn-modal {
+    background-color: var(--txt-color);
+}
+#btn-erase {
+    all: unset;
+    background-color:var(--btn-delete-color);
+    color: black;
+    border-radius: 10%;
+    padding: 10px;
+    cursor: pointer;
+
+}
+#btn-edit {
+    all: unset;
+    background-color:var(--btn-edit-color);
+    color: black;
+    border-radius: 10%;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#my-alert {
+    position: absolute;
+    top: 0px;
+    right: 50px;
+    z-index: 9999;
+}

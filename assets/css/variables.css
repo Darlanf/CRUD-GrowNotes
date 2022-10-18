@@ -1,0 +1,8 @@
+:root {
+    --bg-color: rgb(32, 201, 151);
+    --bg-color-opc: rgb(144, 59, 186, .10);
+    --txt-color: rgb(144, 59, 186);
+    --btn-delete-color: rgb(220, 53, 69);
+    --btn-edit-color: rgb(253, 126, 20);
+    --form-bg-color: rgb(255, 255, 255);
+}
