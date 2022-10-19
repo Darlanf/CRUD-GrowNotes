@@ -205,6 +205,7 @@ const editarRecado = (id) => {
     atualizarLocalStorage(recados);
     mostrarTabela();
     editModal.hide();
+    location.reload();
 };
 
 //sair da pagina e deslogar usuario.   
