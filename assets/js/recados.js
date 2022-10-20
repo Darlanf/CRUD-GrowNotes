@@ -166,11 +166,9 @@ const editarModal = (id) => {
     };
     const editBtn = document.getElementById(`btn-modal`);
     if (editBtn) {
-        editBtn.addEventListener(`click`, () => {
-            editarRecado(id);
-        })
-        editModal.show()
+        editBtn.setAttribute("onclick",  ` editarRecado(${id})`);
     }
+    editModal.show()
 }
 
 const editarRecado = (id) => {
@@ -205,7 +203,6 @@ const editarRecado = (id) => {
     atualizarLocalStorage(recados);
     mostrarTabela();
     editModal.hide();
-    location.reload();
 };
 
 //sair da pagina e deslogar usuario.   
